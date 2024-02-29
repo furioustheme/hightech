@@ -1,0 +1,121 @@
+.hero-area{
+    @include desktop {
+        margin-top: 80px;
+    }
+    @include tablet {
+        margin-top: 0;
+    }
+}
+
+.banner-section {
+    padding: 270px 0 230px;
+}
+
+.card {
+    &-icon {
+        font-size: 70px;
+        display: inline-block;
+    }
+}
+
+.feature-image {
+    position: absolute;
+    left: -100px;
+    top: 100px;
+    height: 500px;
+    width: auto;
+    z-index: -1;
+}
+
+.cta-form {
+    height: 70px;
+    background: $white;
+    border-radius: 40px;
+    border: 0;
+    padding: 0 50px;
+    &:focus {
+        outline: 0;
+    }
+}
+
+.cta-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    border: 0;
+    background: none;
+    color: $primary-color;
+    font-size: 30px;
+    z-index: 1;
+}
+
+.cta-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.contact-wrapper {
+    padding: 100px 120px;
+    @include desktop {
+        padding: 80px 50px;
+    }
+    @include mobile-xs {
+        padding: 50px 10px;
+    }
+    background: $white;
+    box-shadow: 0px 0px 100px 0px rgba(179, 196, 217, 0.4);
+    margin-bottom: -100px;
+    position: relative;
+    z-index: 1;
+}
+
+.form-control {
+    height: 70px;
+    width: 100%;
+    border-radius: 0;
+    border-color: 1px solid $border-color;
+}
+
+textarea.form-control {
+    height: 150px;
+    padding: 20px 10px;
+}
+
+.contact-info {
+    li {
+        i {
+            font-size: 25px;
+            color: $text-color-dark;
+        }
+    }
+}
+
+.social-icon{
+    li{
+        a{
+            background: $white;
+            color: $primary-color;
+            height: 35px;
+            width: 35px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 40%;
+            i{
+                line-height: 35px;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.copyright{
+    background: darken($color: $primary-color, $amount: 7);
+}
+
+.footer-img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 500px;
+}

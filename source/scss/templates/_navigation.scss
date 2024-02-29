@@ -1,0 +1,86 @@
+.navbar {
+    padding: 0 20% 0 10%;
+    @include desktop-lg {
+        padding: 20px 10%;
+    }
+    @include desktop {
+        background: $white;
+    }
+    @include tablet {
+        background: none;
+    }
+    transition: .3s ease;
+    &-nav {
+        .nav-item {
+            margin: 20px 0;
+            @include desktop {
+                margin: 0;
+                text-align: center;
+            }
+        }
+        .nav-link {
+            padding: 15px !important;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 500;
+            display: inline-block;
+        }
+    }
+}
+
+.navbar-2{
+    @include desktop {
+        background: $primary-color;
+    }
+    @include tablet {
+        background: none;
+    }
+}
+
+.navbar-light {
+    .navbar-nav {
+        .nav-link {
+            color: $text-color;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.search-open {
+    position: relative;
+    &:hover {
+        .search-form {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.search-form {
+    position: absolute;
+    bottom: -70px;
+    left: 0;
+    width: 300px;
+    transform: translateX(-50%);
+    transition: .3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.input-wrapper {
+    position: relative;
+    button {
+        background: none;
+        border: 0;
+        position: absolute;
+        font-size: 20px;
+        top: 50%;
+        right: 0px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        padding: 20px;
+        color: $primary-color;
+    }
+}

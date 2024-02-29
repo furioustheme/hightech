@@ -1,0 +1,113 @@
+.controls {
+    li {
+        padding: 25px 50px;
+        color: $text-color;
+        font-size: 14px;
+        text-transform: uppercase;
+        cursor: pointer;
+        &.active {
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+        }
+    }
+}
+
+.work-item {
+    position: relative;
+    &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        content: '';
+        background: rgba($color: $black, $alpha: .4);
+        opacity: 0;
+        transition: .3s ease;
+        border-radius: 5px;
+    }
+    ul {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        li {
+            a {
+                display: inline-block;
+                color: $primary-color;
+                background: $white;
+                height: 50px;
+                width: 50px;
+                line-height: 50px;
+                text-align: center;
+                border-radius: 50%;
+                font-size: 18px;
+                transform: scale(0);
+                transition: .2s ease;
+                @include desktop-lg {
+                    height: 40px;
+                    width: 40px;
+                    line-height: 40px;
+                }
+                @include desktop {
+                    height: 50px;
+                    width: 50px;
+                    line-height: 50px;
+                }
+                &:focus {
+                    outline: 0;
+                }
+            }
+        }
+    }
+    .title {
+        position: absolute;
+        left: 35px;
+        bottom: 40px;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: .2s ease;
+        transition-delay: .1s;
+    }
+    .type {
+        position: absolute;
+        left: 35px;
+        bottom: 15px;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: .2s ease;
+        transition-delay: .2s;
+    }
+    &:hover {
+        &::before {
+            opacity: 1;
+        }
+        a {
+            transform: scale(1);
+        }
+        h4,
+        h5,
+        h6 {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+.work-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    ul {
+        position: relative;
+    }
+    h4,
+    h6 {
+        transition: .2s ease;
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
